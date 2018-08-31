@@ -1,0 +1,2 @@
+- Pretrained filterbanks are included here so that you can run 1-max CNN right away. However, you can run the bash scripts to train them again
+- Output of different networks are also included. However, you can run the bash scripts to train and test the networks again.
