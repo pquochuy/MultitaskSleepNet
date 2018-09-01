@@ -15,5 +15,8 @@ Environment:
 - Python3
 - Tensorflow GPU 1.3.0 (for network training and evaluation)
 
-
+Contact:
+-------------
+Huy Phan
+email: huy.phan{at}eng.ox.ac.uk
 
