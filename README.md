@@ -9,6 +9,21 @@ You need to download the databases to run the experiments again
 
 Currently for __MASS database__, _Tsinalis et al._'s network and _DeepSleepNet1_ (_Supratak et al._) are still missing. We are currently cleaning them up and and will update them very shortly.
 
+How to run:
+-------------
+1. Download the databases
+2. Data preparation
+- Change directory to _\[database\]/data_processing_, for example _MASS/data_processing_
+- Run _main_run.m_
+3. Network training and testing
+- Change directory to a specific network in _\[database\]/tensorflow_net_, for example _MASS/tensorflow_net/multitask_1max_cnn_1to3/_
+- Run a bash script, for example _bash run_3chan.sh_ to repeat 20 cross-validation folds.  
+_Note1:_ You may want to modify and script to make use of your computational resources, such as place a few process them on multiple GPUs. If you want to run multiple processes on a single GPU, you may want to modify the Tensorflow source code to change __GPU options__ when initializing a Tensorflow session.  
+_Note2:_ All networks, except those based on raw signal input like _Chambon et al._, _DeepSleepNet1_ (_Supratak et al._), _Tsinalis et al._ on MASS database, require a pretrained filterbank for preprocessing. If you want to repeat everthing, you may want to train the filterbanks first by execute the bash script in _\[database\]/tensorflow_net/dnn-filterbank_
+4. Evaluation
+- Go up to _\[database\]/_ directory, for example _MASS/_
+- Execute a specific evaluation Matlab script, for example _eval_1maxcnn_one2many.m_
+
 Environment:
 -------------
 - Matlab v7.3 (for data preparation)
