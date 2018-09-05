@@ -13,15 +13,15 @@ How to run:
 -------------
 1. Download the databases
 2. Data preparation
-- Change directory to `\[database\]/data_processing/`, for example `MASS/data_processing`
+- Change directory to `[database]/data_processing/`, for example `MASS/data_processing`
 - Run `main_run.m`
 3. Network training and testing
-- Change directory to a specific network in `\[database\]/tensorflow_net`, for example `MASS/tensorflow_net/multitask_1max_cnn_1to3/`
+- Change directory to a specific network in `[database]/tensorflow_net`, for example `MASS/tensorflow_net/multitask_1max_cnn_1to3/`
 - Run a bash script, for example `bash run_3chan.sh` to repeat 20 cross-validation folds.  
 _Note1:_ You may want to modify and script to make use of your computational resources, such as place a few process them on multiple GPUs. If you want to run multiple processes on a single GPU, you may want to modify the Tensorflow source code to change __GPU options__ when initializing a Tensorflow session.  
-_Note2:_ All networks, except those based on raw signal input like _Chambon et al._, _DeepSleepNet1_ (_Supratak et al._), _Tsinalis et al._ on MASS database, require pretrained filterbanks for preprocessing. If you want to repeat everything, you may want to train the filterbanks first by executing the bash script in `\[database\]/tensorflow_net/dnn-filterbank/`
+_Note2:_ All networks, except those based on raw signal input like _Chambon et al._, _DeepSleepNet1_ (_Supratak et al._), _Tsinalis et al._ on MASS database, require pretrained filterbanks for preprocessing. If you want to repeat everything, you may want to train the filterbanks first by executing the bash script in `[database]/tensorflow_net/dnn-filterbank/`
 4. Evaluation
-- Go up to `\[database\]/` directory, for example `MASS/`
+- Go up to `[database]/` directory, for example `MASS/`
 - Execute a specific evaluation Matlab script, for example `eval_1maxcnn_one2many.m`
 
 Environment:
