@@ -31,8 +31,8 @@ class Config(object):
         self.n_hidden_3 = 512  # nb of neurons inside the neural network
 
         # parameters to generate triangular filterbank shape matrix
-        self.nfilter = 20
-        self.f_min = 0
-        self.f_max = 50
-        self.f_high = 50
-        self.f_low = 0
+        self.nfilter = 20       
+        self.fmin = 0
+        self.fmax = 50
+        self.fhigh = 50
+        self.flow = 0
